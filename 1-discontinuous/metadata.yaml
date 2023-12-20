@@ -1,5 +1,8 @@
 id: 1
 title: Discontinuous Graph
+author: Tom Edgar
+domains:
+  - Group Theory
 notes: |
   TikZ in LaTeX
 code: |
