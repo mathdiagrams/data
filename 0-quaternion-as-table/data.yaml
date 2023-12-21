@@ -2,14 +2,14 @@ id: 0
 title: Quaternion as Table
 domains:
   - Group Theory
-author: '"Wode ""Nimo"" Ni"'
+author: Wode ""Nimo"" Ni
 tools:
   - Penrose
 notes: >-
   For full diagram, see
-  https://penrose.cs.cmu.edu/try/?examples=group-theory%2Fquaternion-multiplication-table 
+  https://penrose.cs.cmu.edu/try/?examples=group-theory%2Fquaternion-multiplication-table
 code: |-
-  '-- variation: LeverkaasAlbatross41817
+  -- variation: LeverkaasAlbatross41817
   Element g1
   Element g2
   Element g3

@@ -19,6 +19,5 @@ code: |+
   specK.color_classes(True)
   specK.curve(True)
   specK.pic()
-
 previewURI: 1.webp
 originalFormat: true

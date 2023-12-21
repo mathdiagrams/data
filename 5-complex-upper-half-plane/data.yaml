@@ -5,7 +5,7 @@ domains:
 author: Håvard Damm-Johnsen
 tools:
   - TikZ
-notes: ''
-code: "\\documentclass[tikz, border=3pt]{standalone}\n\\usepackage{amsmath,amssymb}\n\n\n\\begin{document}\n\\begin{tikzpicture}[scale=.4]\n\_ \\draw[dashed] (-10,0) to (10,0); %real axis\n\_ \\draw (-3,0) to (-3,6); %imag axis\n\_ \\draw[dotted] (-3,6) to (-3,8) node[anchor=west]\n\_ {$i\\infty$}; %imag axis dotted\n\_ \\draw (-3,-1.5) node[anchor = south] {$0$};\n\_ \\draw (-3,3) node[anchor = west] {$i$};\n\_ \\draw (10,-1.5) node[anchor = south] {$\\mathbb R$};\n\_ \\draw (5,7) node {$\\mathfrak h$};\n\_ \\foreach \\x in {-10,...,8}\n\_ \\draw[lightgray] (\\x,.5) to (\\x + 4, 5);\n\\end{tikzpicture}\n\\end{document}"
+notes: ""
+code: "\\documentclass[tikz, border=3pt]{standalone}\n\\usepackage{amsmath,amssymb}\n\n\n\\begin{document}\n\\begin{tikzpicture}[scale=.4]\n \\draw[dashed] (-10,0) to (10,0); %real axis\n \\draw (-3,0) to (-3,6); %imag axis\n \\draw[dotted] (-3,6) to (-3,8) node[anchor=west]\n {$i\\infty$}; %imag axis dotted\n \\draw (-3,-1.5) node[anchor = south] {$0$};\n \\draw (-3,3) node[anchor = west] {$i$};\n \\draw (10,-1.5) node[anchor = south] {$\\mathbb R$};\n \\draw (5,7) node {$\\mathfrak h$};\n \\foreach \\x in {-10,...,8}\n \\draw[lightgray] (\\x,.5) to (\\x + 4, 5);\n\\end{tikzpicture}\n\\end{document}"
 previewURI: 5.webp
 originalFormat: true
