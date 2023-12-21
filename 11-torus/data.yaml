@@ -1,0 +1,11 @@
+id: 11
+title: Torus
+domains:
+  - Geometry
+author: Tom Edgar
+tools:
+  - TikZ
+notes: TikZ in LaTeX
+code: "\\documentclass[tikz,border=1mm]{standalone}\n\\usetikzlibrary{math}\n\\usepackage{tikz-3dplot}\n\\usepackage{pgfplots}\n\\usepgfplotslibrary{colormaps}\n\\pgfplotsset{compat=1.17}\n\n\\begin{document}\n\n\\begin{tikzpicture}\n\_ \_ \\begin{axis}[\n\_ \_ \_ \_ axis equal image,\n\_ \_ \_ \_ hide axis,\n\_ \_ \_ \_ z buffer = sort,\n\_ \_ \_ \_ view = {122}{30},\n\_ \_ \_ \_ scale = 1.5\n\_ \_ ]\n\_ \_ \_ \_ \\addplot3[\n\_ \_ \_ \_ \_ \_ surf,\n\_ \_ \_ \_ \_ \_ colormap/winter,\n\_ \_ \_ \_ \_ \_ shader = faceted interp,\n\_ \_ \_ \_ \_ \_ samples = 40,\n\_ \_ \_ \_ \_ \_ samples y = 80,\n\_ \_ \_ \_ \_ \_ domain = 0:2*pi,\n\_ \_ \_ \_ \_ \_ domain y = 0:2*pi,\n\_ \_ \_ \_ \_ \_ thin,\n\_ \_ \_ \_ ](\n\_ \_ \_ \_ \_ \_ {(3+sin(deg(\\x)))*cos(deg(\\y))},\n\_ \_ \_ \_ \_ \_ {(3+sin(deg(\\x)))*sin(deg(\\y))},\n\_ \_ \_ \_ \_ \_ {cos(deg(\\x))}\n\_ \_ \_ \_ );\n\_ \_ \\end{axis}\n\\end{tikzpicture}\n\n\\end{document}\n\n"
+previewURI: 11.webp
+originalFormat: true

@@ -1,0 +1,72 @@
+id: 18
+title: Pythagorean Theorem Proof Without Words
+domains:
+  - Geometry
+author: Tom Edgar
+tools:
+  - TikZ
+notes: TikZ in LaTeX
+code: >-
+  \documentclass[tikz,border=1mm]{standalone}
+
+
+  \definecolor{bblue}{rgb}{0.36, 0.54, 0.8}
+
+  \definecolor{rred}{rgb}{0.59, 0.0, 0.09}
+
+  \usetikzlibrary{math}
+
+
+  \begin{document}
+
+  \begin{tikzpicture}[scale=1]
+
+  \tikzmath{
+
+  \a=2;
+
+  \b=5;
+
+  \c=sqrt(29);
+
+  }
+
+
+  \draw[] (0,0) rectangle (\b+\a, \a+\b);
+
+  \fill[bblue, opacity=.5] (0,0) rectangle (\b,\a);
+
+  \fill[rred, opacity=.5] (\a+\b,\a+\b) rectangle (\b,\a);
+
+  \draw[thick] (0,\a) -- (\b,0);
+
+  \draw[thick] (0,\a) -- (\a+\b,\a);
+
+  \draw[thick] (\b,0) -- (\b,\a+\b);
+
+  \draw[thick] (\b,\a) -- (\a+\b,\a+\b);
+
+
+  \begin{scope}[shift={(9,0)}]
+
+  \draw[] (0,0) rectangle (\b+\a,\b+\a);
+
+  \draw[thick,fill=rred, opacity=.5] (0,\a) -- (0,\a+\b) -- (\a,\a+\b) --
+  (0,\a);
+
+  \draw[thick,fill=rred, opacity=.5] (\b,0) --(\b+\a,0) -- (\b+\a,\b) -- (\b,0);
+
+  \draw[thick,fill=bblue, opacity=.5] (0,0) --(0,\a) -- (\b,0) -- (0,0);
+
+  \draw[thick,fill=bblue, opacity=.5] (\a,\a+\b) --(\a+\b,\b) -- (\b+\a,\b+\a)
+  -- (\a,\a+\b);
+
+  \end{scope}
+
+
+  \end{tikzpicture}
+
+
+  \end{document}
+previewURI: 18.webp
+originalFormat: true

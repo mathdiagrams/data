@@ -1,0 +1,13 @@
+id: 8
+title: K5
+domains:
+  - Graph Theory
+author: Tom Edgar
+tools:
+  - TikZ
+notes: |-
+  TikZ in LaTeX
+  Complete graph on 5 vertices
+code: "\\documentclass[tikz, border=1mm]{standalone}\n\n\n\\begin{document}\n\\begin{tikzpicture}\n\n\n\\foreach \\i in {0,1,2,3,4}{\n\t\\coordinate (A\\i) at (18+72*\\i:1);\n} %define the coordinates\n\n\n\\foreach \\i in {0,1,2,3,4}{\n\\foreach \\j in {\\i,...,4}{\n\\draw[] (A\\i) -- (A\\j);\n}} %draw the edges between vertices\n\n\n\\foreach \\i in {0,1,2,3,4}{\n\t\\draw[fill=black] (A\\i) circle (2pt);\n} %draw the vertices\n\n\n\\end{tikzpicture}\n\\end{document}"
+previewURI: 8.webp
+originalFormat: true

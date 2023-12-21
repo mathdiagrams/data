@@ -1,0 +1,78 @@
+id: 14
+title: Fano Plane Alternate
+domains:
+  - Combinatorics
+  - Geometry
+author: Tom Edgar
+tools:
+  - TikZ
+notes: |-
+  TikZ in LaTeX
+  This is a nonstandard diagram depicting the Fano plane.
+code: >-
+  \documentclass[tikz, border=1mm]{standalone}
+
+
+
+  \definecolor{ggreen}{rgb}{0.53, 0.66, 0.42}
+
+  \definecolor{yyellow}{rgb}{1.0, 0.96, 0.0}
+
+
+
+  \begin{document}
+
+  \begin{tikzpicture}
+
+
+
+  \draw[ggreen] (-30:2in) -- (0,0) -- (150:1in);
+
+  \draw[brown] (30:1in) -- (0,0) -- (210:2in);
+
+  \draw[orange] (90:2in) -- (0,0) -- (-90:1in);
+
+  \draw[blue] (-90:1in) to[out=-50,in=230] (-30:2in) to[out=60,in=0] (30:1in);
+
+
+
+  \begin{scope}[rotate=120]
+
+  \draw[red] (-90:1in) to[out=-50,in=230] (-30:2in) to[out=60,in=0] (30:1in);
+
+  \end{scope}
+
+
+
+  \begin{scope}[rotate=240]
+
+  \draw[magenta] (-90:1in) to[out=-50,in=230] (-30:2in) to[out=60,in=0]
+  (30:1in);
+
+  \end{scope}
+
+
+
+  \draw[black] (0,0) circle (2in);
+
+  \draw[fill=black] (-30:2in) circle (3pt);
+
+  \draw[fill=black] (210:2in) circle (3pt);
+
+  \draw[fill=black] (90:2in) circle (3pt);
+
+  \draw[fill=black] (0,0) circle (3pt);
+
+  \draw[fill=black] (30:1in) circle (3pt);
+
+  \draw[fill=black] (150:1in) circle (3pt);
+
+  \draw[fill=black] (-90:1in) circle (3pt);
+
+
+
+  \end{tikzpicture}
+
+  \end{document}
+previewURI: 14.webp
+originalFormat: true

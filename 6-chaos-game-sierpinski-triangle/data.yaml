@@ -1,0 +1,16 @@
+id: 6
+title: 'Chaos Game: Sierpinski Triangle'
+domains:
+  - Dynamical Systems
+author: Jiri Minarcik
+tools:
+  - Penrose
+notes: ''
+code: |-
+  Seed p_0
+  Point p_i := NextPoint(p_j) for i in [1, 500], j in [0, 500] where i == j + 1
+
+
+  Corner c_i for i in [1, 3]
+previewURI: 6.webp
+originalFormat: true

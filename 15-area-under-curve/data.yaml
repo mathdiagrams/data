@@ -1,0 +1,13 @@
+id: 15
+title: Area Under Curve
+domains:
+  - Calculus
+author: Tom Edgar
+tools:
+  - TikZ
+notes: |-
+  The area under the sine curve from 0 to pi.
+  TikZ in LaTeX
+code: "\\documentclass[tikz,border=1mm]{standalone}\n\\usepackage{pgfplots}\n\\usepgfplotslibrary{fillbetween}\n\n\n\\begin{document}\n\n\n\\begin{tikzpicture}[scale=2]\n\_ \\begin{axis}[\n\_ \_ axis lines=center,\n\_ \_ ymin=-1.5,\n\_ \_ ymax=1.5,\n\_ \_ xmin=-pi,\n\_ \_ no marks,\n\_ \_ scale=.65,\n\_ \_ \_ \_ xtick={\n\_ \_ \_ \_ -6.28318, -4.7123889, -3.14159,\n\_ \_ \_ \_ 1.5708, 3.14159, 6.28318\n\_ \_ },\n\_ \_ xticklabels={\n\_ \_ \_ \_ $-2\\pi$, $-\\frac{3\\pi}{2}$, $-\\pi$,\n\_ \_ \_ \_ $\\frac{\\pi}{2}$, $\\pi$, $2\\pi$\n\_ \_ }\n\_ \_ ]\n\_ \_ \\addplot+[smooth,blue, domain=-pi:2*pi] {sin(deg(x))}; % actual curve\n\_ \_ \\addplot+[smooth,blue,name path=A, domain=0:pi] {sin(deg(x))}; % actual curve\n\_ \_ \\addplot+[draw=none,name path=B, domain=0:pi] {0};\_ \_ \_% fictional curve\n\_ \_ \\addplot+[gray, opacity=.3] fill between[of=A and B]; % filling\n\_ \\end{axis}\n\\end{tikzpicture}\n\_\n\\end{document}"
+previewURI: 15.webp
+originalFormat: true

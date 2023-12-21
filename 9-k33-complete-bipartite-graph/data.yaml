@@ -1,0 +1,37 @@
+id: 9
+title: K3,3 Complete Bipartite Graph
+domains:
+  - Graph Theory
+author: Tom Edgar
+tools:
+  - TikZ
+notes: TikZ in LaTeX
+code: |-
+  \documentclass[tikz, border=1mm]{standalone}
+  \begin{document}
+
+
+  \begin{tikzpicture}
+
+
+  \coordinate (A1) at (0,2);
+  \coordinate (A2) at (2,2);
+  \coordinate (A3) at (4,2);
+  \coordinate (A4) at (0,0);
+  \coordinate (A5) at (2,0);
+  \coordinate (A6) at (4,0);
+
+
+  \foreach \i in {1,2,3}{
+  \foreach \j in {4,5,6}{
+  \draw[] (A\i)--(A\j);
+  }}
+
+
+  \foreach \i in {1,2,3,4,5,6}{
+  \draw[fill=black] (A\i) circle (.05);
+  }
+  \end{tikzpicture}
+  \end{document}
+previewURI: 9.webp
+originalFormat: true

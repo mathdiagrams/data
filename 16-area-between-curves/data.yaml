@@ -1,0 +1,13 @@
+id: 16
+title: Area Between Curves
+domains:
+  - Calculus
+author: Tom Edgar
+tools:
+  - TikZ
+notes: |-
+  Shows the area between two curves.
+  TikZ in LaTeX
+code: "\\documentclass[tikz,border=1mm]{standalone}\n\\usepackage{pgfplots}\n\\usepgfplotslibrary{fillbetween}\n\n\\begin{document}\n\\begin{tikzpicture}[scale=1]\n\_ \\begin{axis}[\n\_ \_ axis lines=center,\n\_ \_ ymin=-.3,\n\_ \_ xmin=-.3,\n\_ \_ no marks,\n\_ \_ \_xtick={0.4},\n\_ \_ xticklabels={$x$},\n\_ \_ ytick=\\empty,\n\_ \_ yticklabels={};\n\_ \_ ]\n\_ \_ \\addplot+[smooth,blue, name path=A, domain=0:1, samples=500] {x*x}; % actual curve\n\_ \_ \\addplot+[smooth,red, name path=B, domain=0:1, samples=500] {sqrt(x)}; % actual curve\n\_ \_ \\addplot+[lightgray, opacity=.3] fill between[of=A and B]; % filling\n\_ \_ \\addplot +[no marks, orange, solid, line width=.6mm] coordinates {(.4, .632) (.4, .16)};\n\n\n\_ \\end{axis}\n\_ \\node[] at (5,5.5) {\\color{red}$y=f(x)$};\n\_ \\node[] at (6,3.2) {\\color{blue}$y=g(x)$};\n\n\\end{tikzpicture}\n\n\\end{document}"
+previewURI: 16.webp
+originalFormat: true

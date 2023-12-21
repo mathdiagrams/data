@@ -1,0 +1,24 @@
+id: 1
+title: Prime spectrum of a number field
+domains:
+  - Number Theory
+author: Håvard Damm-Johnsen
+tools:
+  - Python
+  - TikZ
+  - PyTikZ
+notes: >-
+  The prime spectrum of the number field $x^7 + 41$. For more details, see
+  https://en.wikipedia.org/wiki/Spectrum_of_a_ring
+
+  https://github.com/havarddj/drawspec
+code: |+
+  # Requires SageMath and PyTikz 
+  K.<a> = NumberField(x^7 + 41) # class number is 7
+  specK = NumberFieldSpec(K, nprimes=20)
+  specK.color_classes(True)
+  specK.curve(True)
+  specK.pic()
+
+previewURI: 1.webp
+originalFormat: true

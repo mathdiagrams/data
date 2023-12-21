@@ -1,0 +1,11 @@
+id: 10
+title: Icosahedron
+domains:
+  - Geometry
+author: Tom Edgar
+tools:
+  - TikZ
+notes: TikZ in LaTeX
+code: "\\documentclass[tikz, border=1mm]{standalone}\n\n\n\\definecolor{bblue}{rgb}{0.36, 0.54, 0.8}\n\\usepackage{tikz-3dplot}\n\\usetikzlibrary{math}\n\\begin{document}\n\\tdplotsetmaincoords{60}{98}\n\n\n\\begin{tikzpicture}[tdplot_main_coords,scale=1,line join=round]\n\_\_\n\_ \_\\tikzmath{\n\\b=1.618;\n\\a=2;\n\\pp=\\a*\\b;\n}\n\_ \_ \\coordinate (A) at (0,\\pp,\\a);\n\_ \_ \\coordinate (B) at (0,\\pp,-\\a);\n\_ \_ \\coordinate (C) at (0,-\\pp,\\a);\n\_ \_ \\coordinate (D) at (0,-\\pp,-\\a);\n\_ \_ \\coordinate (E) at (\\a,0,\\pp);\n\_ \_ \\coordinate (F) at (\\a,0,-\\pp);\n\_ \_ \\coordinate (G) at (-\\a,0,\\pp);\n\_ \_ \\coordinate (H) at (-\\a,0,-\\pp);\n\_ \_ \\coordinate (I) at (\\pp,\\a,0);\n\_ \_ \\coordinate (J) at (\\pp,-\\a,0);\n\_ \_ \\coordinate (K) at (-\\pp,\\a,0);\n\_ \_ \\coordinate (L) at (-\\pp,-\\a,0);\_\n\_ \_\_\n\\fill[color=bblue, opacity=.4] (G)-- (A) -- (E) --cycle ;\n\\fill[color=bblue, opacity=.4] (G)-- (C) -- (E) --cycle ;\n\\fill[color=bblue, opacity=.4] (D)-- (J) -- (C) --cycle ;\n\\fill[color=bblue, opacity=.4] (A)-- (B) -- (I) --cycle ;\n\\fill[color=bblue, opacity=.4] (A)-- (E) -- (I) --cycle ;\n\\fill[color=bblue, opacity=.4] (E)-- (J) -- (I) --cycle ;\n\\fill[color=bblue, opacity=.4] (E)-- (J) -- (C) --cycle ;\n\\fill[color=bblue, opacity=.4] (F)-- (D) -- (J) --cycle ;\n\\fill[color=bblue, opacity=.4] (F)-- (J) -- (I) --cycle ;\n\\fill[color=bblue, opacity=.4] (F)-- (B) -- (I) --cycle ;\n\n\_ \_ \\draw[dashed]\_ \_ (B) -- (H) -- (F)\_\n\_ \_ (D) -- (L)\n\_ \_ (D) -- (H)\_\n\_ \_ (K) -- (L) -- (H) --cycle\n\_ \_ (K) -- (L) -- (G) --cycle\n\_ \_ (C) -- (L)\_\n\_ \_ (B)--(K)\_\n\_ \_ (A)--(K)\n\_ \_ ;\n\_ \_\_\n\_ \_ \\draw[thick]\n\_ \_ \_ \_ (A) -- (I) -- (B) --cycle\_\n\_ \_ \_ \_ (F) -- (I) -- (B) --cycle\_\n\_ \_ \_ \_ (F) -- (I) -- (J) --cycle\n\_ \_ \_ \_ (F) -- (D) -- (J) --cycle\n\_ \_ \_ \_ (C) -- (D) -- (J) --cycle\n\_ \_ \_ \_ (C) -- (E) -- (J) --cycle\n\_ \_ \_ \_ (I) -- (E) -- (J) --cycle\n\_ \_ \_ \_ (I) -- (E) -- (A) --cycle\n\_ \_ \_ \_ (G) -- (E) -- (A) --cycle\n\_ \_ \_ \_ (G) -- (E) -- (C) --cycle\n\_ \_ \_ \_ ;\_\n\n\\end{tikzpicture}\n\n\\end{document}\n\n"
+previewURI: 10.webp
+originalFormat: true

@@ -1,0 +1,60 @@
+id: 19
+title: Lune
+domains:
+  - Geometry
+author: Tom Edgar
+tools:
+  - TikZ
+notes: TikZ in LaTeX
+code: >-
+  \documentclass[tikz, border=1mm]{standalone}
+
+
+  \definecolor{darkgreen}{rgb}{0.09, 0.45, 0.27}
+
+
+  \begin{document}
+
+
+  \begin{tikzpicture}[scale=3]
+
+  \draw [draw=none, fill=darkgreen, opacity=.2, domain=180:360,samples=200] plot
+  ({cos(\x)}, {sin(\x)});
+
+  \draw [draw=none, fill=white, domain=225:315,samples=200] plot
+  ({0+1.414*cos(\x)}, {1+1.414*sin(\x)});
+
+  \draw [gray, line width=.1mm, domain=0:360,samples=200] plot ({cos(\x)},
+  {sin(\x)});
+
+  \draw [darkgreen, line width=.3mm, domain=225:315,samples=200] plot
+  ({0+1.414*cos(\x)}, {1+1.414*sin(\x)});
+
+  \draw [darkgreen, line width=.3mm, domain=180:360,samples=200] plot
+  ({cos(\x)}, {sin(\x)});
+
+
+  \begin{scope}[shift={(0,1-1.414*.025)}]
+
+  \begin{scope}[rotate=45]
+
+  \draw[lightgray] (-.025,-.025) rectangle (.025,.025);
+
+  \end{scope}
+
+  \end{scope}
+
+
+  \draw[gray, dashed, dash pattern=on 4pt off 4pt] (-1,0) -- (0,1) -- (1,0);
+
+  \draw[gray, dashed, dash pattern=on 8pt off 8pt] (-1,0) -- (1,0);
+
+  \draw[gray, fill=gray] (0,0) circle (.5pt);
+
+
+  \end{tikzpicture}
+
+
+  \end{document}
+previewURI: 19.webp
+originalFormat: true
