@@ -9,8 +9,8 @@ tools:
   - PyTikZ
 notes: >-
   The prime spectrum of the number field $x^7 + 41$. For more details, see
-  https://en.wikipedia.org/wiki/Spectrum_of_a_ring
-
+  https://en.wikipedia.org/wiki/Spectrum_of_a_ring.
+  The code is available at:
   https://github.com/havarddj/drawspec
 code: |+
   # Requires SageMath and PyTikz 
